@@ -14,6 +14,7 @@ btnRux.addEventListener('click', () => {
             arr[i][j].addEventListener('click', () => {
                 putColor(arr)
                 rux(i, j);
+                ruxImg(i, j)
             })
         }
     }
@@ -27,6 +28,7 @@ btnFil.addEventListener('click', () => {
             arr[i][j].addEventListener('click', () => {
                 putColor(arr);
                 fil(i, j);
+                filImg(i, j)
             })
         }
     }
@@ -41,6 +43,7 @@ btnFarzin.addEventListener('click', () => {
                 putColor(arr);
                 fil(i, j);
                 rux(i, j)
+                farzinImg(i, j)
             })
         }
     }
@@ -54,6 +57,7 @@ btnOt.addEventListener('click', () => {
             arr[i][j].addEventListener('click', () => {
                 putColor(arr);
                 ot(i, j)
+                otImg(i, j)
             })
         }
     }
@@ -78,6 +82,10 @@ function putColor(arr) {
         for (let j = 0; j < 8; j++) {
             if (i % 2 == 0) j % 2 == 0 ? arr[i][j].style.backgroundColor = "#F2DEB9" : arr[i][j].style.backgroundColor = "#472B1F"
             else j % 2 == 1 ? arr[i][j].style.backgroundColor = "#F2DEB9" : arr[i][j].style.backgroundColor = "#472B1F"
+            arr[i][j].classList.remove("otImg")
+            arr[i][j].classList.remove("filImg")
+            arr[i][j].classList.remove("farzinImg")
+            arr[i][j].classList.remove("ruxImg")
         }
     }
 }
@@ -111,3 +119,8 @@ function ot(i, j) {
     if (arr[i + 2] && arr[i + 2][j + 1]) arr[i + 2][j + 1].style.backgroundColor = '#00d5e1';
     if (arr[i + 2] && arr[i + 2][j - 1]) arr[i + 2][j - 1].style.backgroundColor = '#00d5e1';
 }
+
+const otImg = (i, j) => arr[i][j].classList.add("otImg")
+const farzinImg = (i, j) => arr[i][j].classList.add("farzinImg")
+const filImg = (i, j) => arr[i][j].classList.add("filImg")
+const ruxImg = (i, j) => arr[i][j].classList.add("ruxImg")

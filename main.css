@@ -74,3 +74,31 @@ img {
 .special-bg {
     background-color: #00d5e1;
 }
+
+.otImg {
+    background-image: url("./img/ot.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ruxImg {
+    background-image: url("./img/rux.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.farzinImg {
+    background-image: url("./img/farzin.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.filImg {
+    background-image: url("./img/fil.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
